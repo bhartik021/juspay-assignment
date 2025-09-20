@@ -23,11 +23,37 @@ A modern React dashboard application built with enterprise-grade architecture an
 
 ## Setup & Installation
 
-```bash
-# Install and start
-npm install
-npm start
+These instructions will help you set up and run the project on your local machine.
 
-# Production build
-npm run build
+### Installation
+
+**Clone the repository**
+```bash
+git clone https://github.com/bhartik021/juspay-assignment
 ```
+
+**Navigate to the project directory**
+```bash
+cd juspay-assignment
+```
+
+**Install dependencies**
+```bash
+npm install
+```
+
+### Running the Development Server
+
+Start the development server:
+```bash
+npm start
+```
+
+The application will be available at http://localhost:3000 (or another port if 3000 is occupied).
+
+### Available Scripts
+
+- `npm start` - Starts the development server
+- `npm run build` - Builds the app for production  
+- `npm test` - Runs the test suite
+- `npm run eject` - Ejects from Create React App (one-way operation)
