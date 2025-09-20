@@ -1,3 +1,5 @@
+import { lightImages } from "../assets/images/images";
+
 function Notificationbar() {
   return (
     <div className="dark:bg-[#1c1c1c] dark:border-[#fff] dark:border-opacity-10 w-[280px] p-[20px] border-l border-[#1c1c1c] border-opacity-10">
@@ -11,22 +13,22 @@ function Notificationbar() {
             {
               notificationText: "You have a bug that needs...",
               time: "Just now",
-              icon: "/images/light/BugBeetle.png",
+              icon: lightImages.BugBeetle,
             },
             {
               notificationText: "New user registered",
               time: "59 minutes ago",
-              icon: "/images/light/User.png",
+              icon: lightImages.User,
             },
             {
               notificationText: "You have a bug that needs...",
               time: "12 hours ago",
-              icon: "/images/light/BugBeetle.png",
+              icon: lightImages.BugBeetle,
             },
             {
               notificationText: "Andi Lane subscribed to you...",
               time: "Today, 11:59 AM",
-              icon: "/images/light/Broadcast.png",
+              icon: lightImages.Broadcast,
             },
           ]).map((currItem, index) => (
             <div key={index} className="flex gap-x-[8px] p-[4px] items-start">
@@ -55,27 +57,27 @@ function Notificationbar() {
           {
             text: "You have a bug that needs...",
             time: "Just now",
-            icon: "/images/light/3D05.png",
+            icon: lightImages['3D05'],
           },
           {
             text: "Released a new version",
             time: "59 minutes ago",
-            icon: "/images/light/Female05.png",
+            icon: lightImages.Female05,
           },
           {
             text: "Submitted a bug",
             time: "12 hours ago",
-            icon: "/images/light/3D08.png",
+            icon: lightImages['3D08'],
           },
           {
             text: "Modified A data in Page X",
             time: "Today, 11:59 AM",
-            icon: "/images/light/Male07.png",
+            icon: lightImages.Male07,
           },
           {
             text: "Deleted a page in Project X",
             time: "Feb 2, 2023",
-            icon: "/images/light/Male11.png",
+            icon: lightImages.Male11,
           },
         ]).map((currItem, index) => (
           <div key={index} className="flex gap-x-[8px] p-[4px] items-start">
@@ -104,27 +106,27 @@ function Notificationbar() {
         </div>
         {Array.from([
           {
-            icon: "/images/light/Female15.png",
+            icon: lightImages.Female15,
             name: "Natali Craig",
           },
           {
-            icon: "/images/light/Male08.png",
+            icon: lightImages.Male08,
             name: "Drew Cano",
           },
           {
-            icon: "/images/light/Male06.png",
+            icon: lightImages.Male06,
             name: "Orlando Diggs",
           },
           {
-            icon: "/images/light/Female08.png",
+            icon: lightImages.Female08,
             name: "Andi Lane",
           },
           {
-            icon: "/images/light/Female09.png",
+            icon: lightImages.Female09,
             name: "Kate Morrison",
           },
           {
-            icon: "/images/light/3D03.png",
+            icon: lightImages['3D03'],
             name: "Koray Okumus",
           },
         ]).map((currItem, index) => (

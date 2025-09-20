@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
+import { getThemeImage } from "../assets/images/images";
 
 function Home() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Home() {
                 cardName: "Customers",
                 data1: "3,781",
                 data2: "+11.01%",
-                data2Icon: "/images/light/ArrowRise.png",
+                data2Icon: "ArrowRise",
                 bgColor: "#e3f5ff",
               },
 
@@ -40,7 +41,7 @@ function Home() {
                 cardName: "Orders",
                 data1: "1,219",
                 data2: "-0.03%",
-                data2Icon: "/images/light/ArrowFall.png",
+                data2Icon: "ArrowFall",
                 bgColor: "#f7f9fb",
                 darkBgColor: "rgba(255, 255, 255, 0.05)",
               },
@@ -48,7 +49,7 @@ function Home() {
                 cardName: "Revenue",
                 data1: "$695",
                 data2: "+15.03%",
-                data2Icon: "/images/light/ArrowRise.png",
+                data2Icon: "ArrowRise",
                 bgColor: "#f7f9fb",
                 darkBgColor: "rgba(255, 255, 255, 0.05)",
               },
@@ -56,7 +57,7 @@ function Home() {
                 cardName: "Growth",
                 data1: "3,781",
                 data2: "+11.01%",
-                data2Icon: "/images/light/ArrowRise.png",
+                data2Icon: "ArrowRise",
                 bgColor: "#e5ecf6",
               },
             ]).map((currItem, index) => (
@@ -86,12 +87,9 @@ function Home() {
                     {currItem.data2}
                     <span>
                       <img
-                        src={`${
-                          theme === "dark" && !!currItem.darkBgColor
-                            ? "dark/"
-                            : ""
-                        }${currItem.data2Icon}`}
+                        src={getThemeImage(currItem.data2Icon, theme)}
                         className="w-[16px] h-[16px]"
+                        alt="trend arrow"
                       />
                     </span>
                   </div>
@@ -107,8 +105,9 @@ function Home() {
           </div>
           <div>
             <img
-              src={`/images/${theme === "dark" ? "dark" : "light"}/BarChart.png`}
+              src={getThemeImage('BarChart', theme)}
               className="w-[384px] h-[168px]"
+              alt="Bar Chart"
             />
           </div>
         </div>
@@ -134,8 +133,9 @@ function Home() {
           </div>
           <div>
             <img
-              src={`/images/${theme === "dark" ? "dark" : "light"}/CurvChart.png`}
+              src={getThemeImage('CurvChart', theme)}
               className="w-[614px] h-[232px]"
+              alt="Revenue Chart"
             />
           </div>
         </div>
@@ -147,8 +147,9 @@ function Home() {
           </div>
           <div className="mb-[16px]">
             <img
-              src={`/images/${theme === "dark" ? "dark" : "light"}/World Map.png`}
+              src={getThemeImage('WorldMap', theme)}
               className="w-[154px] h-[82px]"
+              alt="World Map"
             />
           </div>
           <div>
@@ -278,8 +279,9 @@ function Home() {
           <div className="text-[14px] font-semibold mb-[16px]">Total Sales</div>
           <div className="flex justify-center mb-[16px] relative">
             <img
-              src={`/images/${theme === "dark" ? "dark" : "light"}/01.png`}
+              src={getThemeImage('Chart01', theme)}
               className="w-[120px] h-[120px]"
+              alt="Sales Chart"
             />
             <div className="absolute bottom-[20px] left-[25px] bg-[#1c1c1c] bg-opacity-80 px-[8px] py-[4px] text-[#fff] text-[12px] rounded-[8px]">
               38.6%

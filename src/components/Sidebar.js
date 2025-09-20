@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { getThemeImage, lightImages } from "../assets/images/images";
 
 function Sidebar() {
   const context = useContext(AppContext);
@@ -10,7 +11,7 @@ function Sidebar() {
   return (
     <div className="dark:bg-[#1c1c1c] dark:text-[#fff]  dark:border-[#fff] dark:border-opacity-10 w-[212px] p-4 text-[14px] text-[#1c1c1c] border-r border-black border-opacity-20">
       <div className="flex items-center gap-2">
-        <img src="/images/light/ByeWind.png" className="w-[24px]" alt="ByeWind" />
+        <img src={lightImages.ByeWind} className="w-[24px]" alt="ByeWind" />
         <div className="">ByeWind</div>
       </div>
       <div className="mt-4">
@@ -37,22 +38,22 @@ function Sidebar() {
             <ul>
               {Array.from([
                 {
-                  icon: "/images/light/ChartPieSlice.png",
+                  icon: "ChartPieSlice",
                   name: "Default",
                   active: true,
                 },
                 {
-                  icon: "/images/light/ShoppingBagOpen.png",
+                  icon: "ShoppingBagOpen",
                   name: "eCommerce",
                   active: false,
                 },
                 {
-                  icon: "/images/light/FolderNotch.png",
+                  icon: "FolderNotch",
                   name: "Projects",
                   active: false,
                 },
                 {
-                  icon: "/images/light/BookOpen.png",
+                  icon: "BookOpen",
                   name: "Open Courses",
                   active: false,
                 },
@@ -67,9 +68,7 @@ function Sidebar() {
                 >
                   <span>
                     <img
-                      src={`/images/${
-                        theme === "dark" ? "dark" : "light"
-                      }/ArrowLineRight.png`}
+                      src={getThemeImage('ArrowLineRight', theme)}
                       className={`w-[16px] h-[16px] ${
                         currItem.active ? "opacity-0" : ""
                       }`}
@@ -79,7 +78,7 @@ function Sidebar() {
 
                   <span>
                     <img
-                      src={currItem.icon}
+                      src={getThemeImage(currItem.icon, theme)}
                       className="w-[20px] h-[20px]"
                       alt={currItem.name}
                     />
@@ -104,13 +103,13 @@ function Sidebar() {
               [
                 {
                   name: "UserProfile",
-                  icon: "/images/light/IdentificationBadge.png",
+                  icon: "IdentificationBadge",
                   subItems: [],
                 },
-                { name: "Account", icon: "/images/light/IdentificationCard.png" },
-                { name: "Corporate", icon: "/images/light/UsersThree.png" },
-                { name: "Blog", icon: "/images/light/Notebook.png" },
-                { name: "Social", icon: "/images/light/ChatsTeardrop.png" },
+                { name: "Account", icon: "IdentificationCard" },
+                { name: "Corporate", icon: "UsersThree" },
+                { name: "Blog", icon: "Notebook" },
+                { name: "Social", icon: "ChatsTeardrop" },
               ].map((currItem, index) => (
                 <div key={index}>
                   <li
@@ -119,9 +118,7 @@ function Sidebar() {
                   >
                     <span>
                       <img
-                        src={`/images/${
-                          theme === "dark" ? "dark" : "light"
-                        }/ArrowLineRight.png`}
+                        src={getThemeImage('ArrowLineRight', theme)}
                         className={`w-[16px] h-[16px] ${
                           currItem.subItems ? "rotate-90" : ""
                         }`}
@@ -130,7 +127,7 @@ function Sidebar() {
                     </span>
                     <span>
                       <img
-                        src={currItem.icon}
+                        src={getThemeImage(currItem.icon, theme)}
                         className="w-[20px] h-[20px]"
                         alt={currItem.name}
                       />

@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { AppContext } from "../context/AppContext";
+import { getThemeImage } from "../assets/images/images";
 
 function Navbar() {
   const context = useContext(AppContext);
@@ -17,14 +18,14 @@ function Navbar() {
       <div className="flex items-center gap-x-[4px]">
         <span className="p-[4px]">
           <img
-            src={`/images/${theme === "dark" ? "dark" : "light"}/Sidebar.png`}
+            src={getThemeImage('Sidebar', theme)}
             className="w-[20px] h-[20px]"
             alt="Sidebar"
           />
         </span>
         <span className="p-[4px]">
           <img
-            src={`/images/${theme === "dark" ? "dark" : "light"}/Star.png`}
+            src={getThemeImage('Star', theme)}
             className="w-[20px] h-[20px]"
             alt="Star"
           />
@@ -41,7 +42,7 @@ function Navbar() {
             <div className="flex items-center gap-x-[4px]">
               <span>
                 <img
-                  src={`/images/${theme === "dark" ? "dark" : "light"}/Search.png`}
+                  src={getThemeImage('Search', theme)}
                   className="w-[16px] h-[16px]"
                   alt="Search"
                 />
@@ -57,10 +58,10 @@ function Navbar() {
         {/* Buttons */}
         <div className="flex items-center">
           {Array.from([
-            { icon: "Sun.png", themeButton: true },
-            { icon: "ClockCounterClockwise.png" },
-            { icon: "Bell.png" },
-            { icon: "Sidebar.png" },
+            { icon: "Sun", themeButton: true },
+            { icon: "ClockCounterClockwise" },
+            { icon: "Bell" },
+            { icon: "Sidebar" },
           ]).map((currItem, index) => (
             <div key={index} className="gap-x-[4px] p-[4px]">
               <button
@@ -68,9 +69,9 @@ function Navbar() {
                 onClick={() => (!!currItem.themeButton ? changeTheme() : null)}
               >
                 <img
-                  src={`/images/${theme === "dark" ? "dark" : "light"}/${currItem.icon}`}
+                  src={getThemeImage(currItem.icon, theme)}
                   className="w-[20px] h-[20px]"
-                  alt={currItem.icon.replace('.png', '')}
+                  alt={currItem.icon}
                 />
               </button>
             </div>

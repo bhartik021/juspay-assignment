@@ -1,8 +1,10 @@
+import { lightImages } from "../assets/images/images";
+
 export const orderList = [
   {
     orderId: "#CM9081",
     userName: "Natali Craig",
-    userImage: "/images/light/Female15.png",
+    userImage: lightImages.Female15,
     projectName: "Landing Page",
     address: "Meadow Lane Oakland",
     date: "Just now",
@@ -13,7 +15,7 @@ export const orderList = [
   {
     orderId: "#CM9082",
     userName: "Kate Morrison",
-    userImage: "/images/light/Female09.png",
+    userImage: lightImages.Female09,
     projectName: "CRM Admin Pages",
     address: "Larry San Francisco",
     date: "A minute ago",
@@ -24,7 +26,7 @@ export const orderList = [
   {
     orderId: "#CM9083",
     userName: "Drew Cano",
-    userImage: "/images/light/Male08.png",
+    userImage: lightImages.Male08,
     projectName: "Client Project",
     address: "Bagwell Avenue Ocala",
     date: "1 hour ago",
@@ -35,7 +37,7 @@ export const orderList = [
   {
     orderId: "#CM9084",
     userName: "Orlando Diggs",
-    userImage: "/images/light/Male06.png",
+    userImage: lightImages.Male06,
     projectName: "Admin Dashboard",
     address: "Washburn Baton Rouge",
     date: "Yesterday",
@@ -46,7 +48,7 @@ export const orderList = [
   {
     orderId: "#CM9085",
     userName: "Andie Lane",
-    userImage: "/images/light/Female08.png",
+    userImage: lightImages.Female08,
     projectName: "App Landing Page",
     address: "Nest Lane Olivette",
     date: "Feb 2, 2023",
@@ -58,7 +60,7 @@ export const orderList = [
   {
     orderId: "#CM9081",
     userName: "Natali Craig",
-    userImage: "/images/light/Female15.png",
+    userImage: lightImages.Female15,
     projectName: "Landing Page",
     address: "Meadow Lane Oakland",
     date: "Just now",
@@ -69,7 +71,7 @@ export const orderList = [
   {
     orderId: "#CM9082",
     userName: "Kate Morrison",
-    userImage: "/images/light/Female09.png",
+    userImage: lightImages.Female09,
     projectName: "CRM Admin Pages",
     address: "Larry San Francisco",
     date: "A minute ago",
@@ -80,7 +82,7 @@ export const orderList = [
   {
     orderId: "#CM9083",
     userName: "Drew Cano",
-    userImage: "/images/light/Male08.png",
+    userImage: lightImages.Male08,
     projectName: "Client Project",
     address: "Bagwell Avenue Ocala",
     date: "1 hour ago",
@@ -91,7 +93,7 @@ export const orderList = [
   {
     orderId: "#CM9084",
     userName: "Orlando Diggs",
-    userImage: "/images/light/Male06.png",
+    userImage: lightImages.Male06,
     projectName: "Admin Dashboard",
     address: "Washburn Baton Rouge",
     date: "Yesterday",
@@ -102,7 +104,7 @@ export const orderList = [
   {
     orderId: "#CM9085",
     userName: "Andie Lane",
-    userImage: "/images/light/Female08.png",
+    userImage: lightImages.Female08,
     projectName: "App Landing Page",
     address: "Nest Lane Olivette",
     date: "Feb 2, 2023",
