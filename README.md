@@ -4,6 +4,8 @@ A modern React dashboard application built with enterprise-grade architecture an
 
 <img width="1470" height="956" alt="Screenshot 2025-09-20 at 11 41 28 AM" src="https://github.com/user-attachments/assets/47b442b8-7d1d-40c3-9bb8-179c4a104e29" />
 
+<img width="1470" height="956" alt="Screenshot 2025-09-20 at 11 42 35 AM" src="https://github.com/user-attachments/assets/1c6cd3b3-41dc-477e-b67f-5c56fbcca863" />
+
 
 ## Technical Stack
 
