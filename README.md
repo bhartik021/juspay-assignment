@@ -7,41 +7,9 @@ A modern React dashboard application built with enterprise-grade architecture an
 - **React 18** with Hooks and Context API
 - **Tailwind CSS** with custom dark mode implementation
 - **React Router v6** for navigation
-- **localStorage** for theme persistence
-- **Centralized asset management** system
-
-## Key Features
-
-### Dashboard Analytics
-- Interactive metrics cards with real-time trend indicators
-- Revenue analytics with projection vs actual comparisons  
-- Geographic revenue distribution with interactive world map
-- Product performance tables with detailed analytics
-
-### Advanced Theme System
-- Complete light/dark mode with persistent preferences
-- Theme-aware image loading system
-- Accessibility compliant with WCAG standards
-
-### Order Management
-- Comprehensive order list with pagination and filtering
-- Real-time status updates with color-coded indicators
-- User profile integration with avatar system
+- **localStorage** for theme persistences
 
 ## Technical Implementation
-
-### Architecture Highlights
-```javascript
-// Centralized asset management
-const getThemeImage = (imageName, theme = 'light') => {
-  return images[theme]?.[imageName] || images.light[imageName];
-};
-
-// Theme persistence with localStorage
-const [theme, setTheme] = useState(() => {
-  return localStorage.getItem("juspay-theme") || "light";
-});
-```
 
 ### Performance Optimizations
 - Code splitting with lazy loading
