@@ -1,4 +1,4 @@
-# Juspay Dashboard Assignment
+# Juspay UI Developer Assignment
 
 A modern React dashboard application built with enterprise-grade architecture and best practices, showcasing advanced development skills and performance optimization techniques.
 
