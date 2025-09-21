@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { orderList } from "../data/orderList";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { getThemeImage, lightImages } from "../assets/images/images";
 
 function OrderList() {
   const navigate = useNavigate();
@@ -23,16 +24,16 @@ function OrderList() {
       <div className="dark:bg-[#fff] dark:bg-opacity-[0.05] flex items-center justify-between mt-4 bg-[#f7f9fb] p-[8px] rounded-[8px]">
         <div className="flex items-center gap-x-[4px]">
           {Array.from([
-            { icon: "/images/light/Add.png" },
-            { icon: "/images/light/FunnelSimple.png" },
-            { icon: "/images/light/ArrowsDownUp.png" },
+            { icon: "Add" },
+            { icon: "FunnelSimple" },
+            { icon: "ArrowsDownUp" },
           ]).map((currItem) => (
             <div>
               <button>
                 <img
-                  src={currItem.icon}
+                  src={lightImages[currItem.icon]}
                   className="w-[20px] h-[20px]"
-                  alt={currItem.icon.replace('.png', '')}
+                  alt={currItem.icon}
                 />
               </button>
             </div>
@@ -43,7 +44,7 @@ function OrderList() {
           <div className="flex items-center gap-x-[4px]">
             <span>
               <img
-                src={`/images/${theme === "dark" ? "dark" : "light"}/Search.png`}
+                src={getThemeImage('Search', theme)}
                 className="w-[16px] h-[16px]"
                 alt="Search"
               />
@@ -77,7 +78,7 @@ function OrderList() {
               <td className="px-[12px] py-[8px]">{currItem.orderId}</td>
               <td className="px-[12px] py-[8px]">
                 <span className="flex items-center gap-x-[8px]">
-                  <img src={currItem.userImage} className="w-[24px] h-[24px]" />
+                  <img src={currItem.userImage} className="w-[24px] h-[24px]" alt={currItem.userName} />
                   {currItem.userName}
                 </span>
               </td>
@@ -85,7 +86,7 @@ function OrderList() {
               <td className="px-[12px] py-[8px]">{currItem.address}</td>
               <td className="px-[12px] py-[8px]">
                 <span className="flex items-center gap-x-[8px]">
-                  <img src="/images/light/CalendarBlank.png" className="w-[16px] h-[16px]" alt="Calendar" />
+                  <img src={lightImages.CalendarBlank} className="w-[16px] h-[16px]" alt="Calendar" />
                   {currItem.date}
                 </span>
               </td>
@@ -117,10 +118,9 @@ function OrderList() {
               </td>
               <td className="px-[12px] py-[8px] rounded-tr-[8px] rounded-br-[8px]">
                 <img
-                  src={`/images/${
-                    theme === "dark" ? "dark" : "light"
-                  }/DotsThreeOutlineVertical.png`}
+                  src={getThemeImage('DotsThreeOutlineVertical', theme)}
                   className="group-hover:opacity-100 opacity-0 w-[16px] h-[16px]"
+                  alt="Options"
                 />
               </td>
             </tr>
@@ -132,8 +132,9 @@ function OrderList() {
       <div className="mt-4 flex items-center gap-x-[8px] justify-end">
         <button className="w-[28px] h-[28px] p-[4px]">
           <img
-            src={`/images/${theme === "dark" ? "dark" : "light"}/ArrowLineLeft.png`}
+            src={getThemeImage('ArrowLineLeft', theme)}
             className="w-[20px] h-[20px]"
+            alt="Previous"
           />
         </button>
         <div className="flex items-center gap-x-[8px]">
@@ -153,8 +154,9 @@ function OrderList() {
         </div>
         <button className="w-[28px] h-[28px] p-[4px] rotate-180">
           <img
-            src={`/images/${theme === "dark" ? "dark" : "light"}/ArrowLineLeft.png`}
+            src={getThemeImage('ArrowLineLeft', theme)}
             className="w-[20px] h-[20px]"
+            alt="Next"
           />
         </button>
       </div>
