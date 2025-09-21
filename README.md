@@ -72,6 +72,6 @@ The application will be available at http://localhost:3000 (or another port if 3
 
 ## Live Demo
 
-The application is deployed and available at: [Live Demo Link](https://your-deployed-app-url.vercel.app)
+The application is deployed and available at: [Live Demo Link](https://juspay-assignment-i7id.vercel.app/)
 
 **Note**: Replace with actual deployment URL after deploying to Vercel, Netlify, or GitHub Pages.
